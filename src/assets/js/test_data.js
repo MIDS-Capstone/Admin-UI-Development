@@ -91,7 +91,7 @@ function loadData(path) {
 		async: false,
 		dataType: 'json',
 		success: function(response) {
-			return response; 
+			return response.responseJSON; 
 		}
 	});
 }
