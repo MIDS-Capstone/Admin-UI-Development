@@ -48,7 +48,7 @@ console.log(path);
 
 function loadData(path) {
 	let tmp =  $.getJSON(path);
-	return tmp.responseJSON
+	return tmp.responseJSON;
 }
 
 bar = loadData(path);
