@@ -18,7 +18,7 @@
       color: layoutColors.defaultText,
       marginTop: 0,
       marginRight: 15,
-      dataProvider: loadData(path),
+      dataProvider: loadData(path).responseJSON,
       valueAxes: [
         {
           axisAlpha: 0,
