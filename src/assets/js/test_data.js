@@ -53,5 +53,5 @@ function loadData(path) {
 
 bar = loadData(path);
 
-console.log(bar);
+console.log(bar.responseJSON);
 
