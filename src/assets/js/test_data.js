@@ -60,5 +60,5 @@ console.log(path);
 
 let tmp = $.getJSON(path, function(response) {
 	return response;
-}).responseJSON;
+});
 
