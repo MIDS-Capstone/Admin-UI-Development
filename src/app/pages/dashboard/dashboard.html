@@ -1,6 +1,40 @@
 <dashboard-pie-chart></dashboard-pie-chart>
 
+
 <div class="row">
+  <div class="col-lg-2 col-md-2 col-sm-2"
+       ba-panel
+       ba-panel-title="Risk Profile"
+       ba-panel-class="with-scroll">
+    <div ng-include="'app/pages/dashboard/barChart/barChart.html'"></div>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-2"
+	   ba-panel
+	   ba-panel-title="Cumulative Profit"
+	   ba-panel-class="with-scroll">
+	<div ng-include="'app/pages/dashboard/lineChartProfit/lineChartProfit.html'"></div>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-2"
+	   ba-panel
+	   ba-panel-title="Cumulative Loss"
+	   ba-panel-class="with-scroll">
+	<div ng-include="'app/pages/dashboard/lineChartLoss/lineChartLoss.html'"></div>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-2"
+	   ba-panel
+	   ba-panel-title="% Trades Profitable"
+	   ba-panel-class="with-scroll">
+	<div ng-include="'app/pages/dashboard/lineChartPCT/lineChartPCT.html'"></div>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-2"
+	   ba-panel
+	   ba-panel-title="Average Profit per Trade"
+	   ba-panel-class="with-scroll">
+	<div ng-include="'app/pages/dashboard/lineChartAVG/lineChartAVG.html'"></div>
+  </div>
+</div>
+
+<!-- <div class="row">
   <div class="col-lg-6 col-md-12 col-sm-12"
        ba-panel
        ba-panel-title="Acquisition Channels"
@@ -13,22 +47,7 @@
 	   ba-panel-class="medium-panel">
 	<dashboard-line-chart></dashboard-line-chart>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-lg-6 col-md-12 col-sm-12"
-       ba-panel
-       ba-panel-title="Bar Chart Example"
-       ba-panel-class="with-scroll">
-    <div ng-include="'app/pages/dashboard/barChart/barChart.html'"></div>
-  </div>
-  <div class="col-lg-6 col-md-12 col-sm-12"
-	   ba-panel
-	   ba-panel-title="Line Chart Example"
-	   ba-panel-class="with-scroll">
-	<div ng-include="'app/pages/dashboard/lineChart/lineChart.html'"></div>
-  </div>
-</div>
+</div> -->
 
 <!-- <div class="row">
   <div class="col-lg-6 col-md-12 col-sm-12"
