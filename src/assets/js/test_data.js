@@ -62,3 +62,5 @@ let tmp = $.getJSON(path, function(response) {
 	return response;
 });
 
+console.log(tmp);
+
