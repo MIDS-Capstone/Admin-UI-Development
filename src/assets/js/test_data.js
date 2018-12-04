@@ -20,8 +20,23 @@ var path = 'src/assests/test_data.json';
 
 console.log(path);
 
-function Foo(path) {
-	var bar;
-	bar = $.getJSON(path); 
+// function Foo(path) {
+// 	var bar;
+// 	bar = $.getJSON(path); 
 
-	return bar;}
+// 	return bar;}
+
+// StackOverflow anser...
+//https://stackoverflow.com/questions/17626776/why-is-my-json-file-not-found
+
+// $.getJSON('/Content/dumboJr.json', function (data) {
+    // $.each(data, function(i, dataPoint) {
+        // // Bla
+      // });
+  // });
+
+$.getJSON(path, function(data){
+	$.each(data, function(i, dataPoint){
+		console.log(dataPoint)''
+	});
+});
