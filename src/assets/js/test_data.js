@@ -16,6 +16,12 @@ var hf = 'hello friend!';
 
 console.log(hf);
 
-var path = 'assests/test_data.json';
+var path = 'src/assests/test_data.json';
 
 console.log(path);
+
+function Foo(path) {
+	var bar;
+	bar = $.getJSON(path); 
+
+	return bar;}
