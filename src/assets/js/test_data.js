@@ -46,12 +46,19 @@ console.log(path);
 // 	return data;
 // });
 
-function loadData(path) {
-	let tmp =  $.getJSON(path);
-	return tmp;
-}
+// function loadData(path) {
+// 	let tmp =  $.getJSON(path);
+// 	return tmp;
+// }
 
-bar = loadData(path);
+// bar = loadData(path);
 
-console.log(bar.responseJSON);
+// console.log(bar.responseJSON);
+
+// problems with getJSON being asynchronous... a solution...
+// https://stackoverflow.com/questions/33727286/responsejson-of-a-getjson-object-is-undefined
+
+let tmp = $.getJSON(path, function(response) {
+	return response;
+}).responseJSON;
 
