@@ -47,7 +47,8 @@ console.log(path);
 // });
 
 function loadData(path) {
-	return $.getJSON(path).responseJSON;
+	let tmp =  $.getJSON(path);
+	return tmp.responseJSON
 }
 
 bar = loadData(path);
