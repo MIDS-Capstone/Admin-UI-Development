@@ -63,15 +63,6 @@ console.log(path);
 // });
 
 // https://stackoverflow.com/questions/4116992/how-to-include-json-data-in-javascript-synchronously-without-parsing
-let tmp = $.ajax({
-  url: 'assets/test_data.json',
-  async: false,
-  dataType: 'json',
-  success: function (response) {
-    return response
-  }
-});
-
 // $.ajax({
 //   url: 'MyArray.json',
 //   async: false,
@@ -81,5 +72,28 @@ let tmp = $.ajax({
 //   }
 // });
 
-console.log(tmp.responseJSON);
+// This works but it's a super bad idea because it's on the main thread
+// and can be detrimental to the user experience according to the error message. 
+// let tmp = $.ajax({
+//   url: 'assets/test_data.json',
+//   async: false,
+//   dataType: 'json',
+//   success: function (response) {
+//     return response;
+//   }
+// });
+// console.log(tmp.responseJSON);
 
+
+function loadData(path) {
+	return $.ajax({
+		url: path,
+		async: false,
+		dataType: 'json',
+		success: function(response) {
+			return response; 
+		}
+	});
+}
+
+console.log(path);
