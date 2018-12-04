@@ -15,3 +15,7 @@ The Admin-UI-Development/inject.js script has the code for injecting scripts.
 var hf = 'hello friend!';
 
 console.log(hf);
+
+var path = 'assests/test_data.json';
+
+console.log(path);
