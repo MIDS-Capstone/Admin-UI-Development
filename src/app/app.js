@@ -22,4 +22,4 @@ App.controller('test_data', function($scope, $http)){
        .then(function(res){
           $scope.test_data = res.data;
        });
-}
+};
