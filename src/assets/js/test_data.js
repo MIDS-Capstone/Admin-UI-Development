@@ -58,9 +58,28 @@ console.log(path);
 // problems with getJSON being asynchronous... a solution...
 // https://stackoverflow.com/questions/33727286/responsejson-of-a-getjson-object-is-undefined
 
-let tmp = $.getJSON(path, function(response) {
-	return response;
+// let tmp = $.getJSON(path, function(response) {
+// 	return response;
+// });
+
+// https://stackoverflow.com/questions/4116992/how-to-include-json-data-in-javascript-synchronously-without-parsing
+let tmp = $.ajax({
+  url: 'assets/test_data.json',
+  async: false,
+  dataType: 'json',
+  success: function (response) {
+    return response
+  }
 });
+
+// $.ajax({
+//   url: 'MyArray.json',
+//   async: false,
+//   dataType: 'json',
+//   success: function (response) {
+//     // do stuff with response.
+//   }
+// });
 
 console.log(tmp.responseJSON);
 
