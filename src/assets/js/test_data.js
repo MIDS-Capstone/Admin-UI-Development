@@ -12,6 +12,7 @@ The Admin-UI-Development/inject.js script has the code for injecting scripts.
     // path.join('!' + conf.paths.src, '/app/__/*.mock.js'),
   // ])
 */
+var bar = [];
 var hf = 'hello friend!';
 
 console.log(hf);
@@ -35,8 +36,13 @@ console.log(path);
       // });
   // });
 
-$.getJSON(path, function(data){
+var arp = $.getJSON(path, function(data){
 	$.each(data, function(i, dataPoint){
 		console.log(dataPoint);
 	});
+
+	return data;
 });
+
+bar = arp(path);
+
