@@ -16,7 +16,7 @@ var hf = 'hello friend!';
 
 console.log(hf);
 
-var path = '/src/assests/test_data.json';
+var path = 'assets/test_data.json';
 
 console.log(path);
 
