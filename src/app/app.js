@@ -16,3 +16,10 @@ angular.module('BlurAdmin', [
   'BlurAdmin.theme',
   'BlurAdmin.pages'
 ]);
+
+App.controller('test_data', function($scope, $http)){
+  $http.get('test_data.json')
+       .then(function(res){
+          $scope.test_data = res.data;
+       });
+}
