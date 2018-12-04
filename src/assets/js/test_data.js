@@ -37,6 +37,6 @@ console.log(path);
 
 $.getJSON(path, function(data){
 	$.each(data, function(i, dataPoint){
-		console.log(dataPoint)''
+		console.log(dataPoint);
 	});
 });
