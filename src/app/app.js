@@ -17,6 +17,8 @@ angular.module('BlurAdmin', [
   'BlurAdmin.pages'
 ]);
 
+var App = angular.module('App', []);
+
 App.controller('test_data', function($scope, $http)){
   $http.get('test_data.json')
        .then(function(res){
