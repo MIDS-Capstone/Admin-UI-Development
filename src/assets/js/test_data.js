@@ -12,16 +12,16 @@ The Admin-UI-Development/inject.js script has the code for injecting scripts.
     // path.join('!' + conf.paths.src, '/app/__/*.mock.js'),
   // ])
 */
-let bar = [];
-let hf = '';
+// let bar = [];
+// let hf = '';
 
-hf = 'hello friend!';
+// hf = 'hello friend!';
 
-console.log(hf);
+// console.log(hf);
 
 var path = 'assets/test_data.json';
 
-console.log(path);
+// console.log(path);
 
 // function Foo(path) {
 // 	var bar;
@@ -95,5 +95,3 @@ function loadData(path) {
 		}
 	});
 }
-
-console.log(path);

@@ -18,72 +18,7 @@
       color: layoutColors.defaultText,
       marginTop: 0,
       marginRight: 15,
-      dataProvider: [
-        {
-          year: '1990',
-          value: -0.17
-        },
-        {
-          year: '1991',
-          value: -0.254
-        },
-        {
-          year: '1992',
-          value: 0.019
-        },
-        {
-          year: '1993',
-          value: -0.063
-        },
-        {
-          year: '1994',
-          value: 0.005
-        },
-        {
-          year: '1995',
-          value: 0.077
-        },
-        {
-          year: '1996',
-          value: 0.12
-        },
-        {
-          year: '1997',
-          value: 0.011
-        },
-        {
-          year: '1998',
-          value: 0.177
-        },
-        {
-          year: '1999',
-          value: -0.021
-        },
-        {
-          year: '2000',
-          value: -0.037
-        },
-        {
-          year: '2001',
-          value: 0.03
-        },
-        {
-          year: '2002',
-          value: 0.179
-        },
-        {
-          year: '2003',
-          value: 0.2
-        },
-        {
-          year: '2004',
-          value: 0.180
-        },
-        {
-          year: '2005',
-          value: 0.21
-        }
-      ],
+      dataProvider: loadData(path),
       valueAxes: [
         {
           axisAlpha: 0,
