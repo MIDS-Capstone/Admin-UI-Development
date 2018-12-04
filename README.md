@@ -3,6 +3,9 @@
 ## Demo
 http://169.60.138.213:3000/#/dashboard
 
+## Setting up docker environment
+Look at the wiki for instructions
+
 ## Documentation
 Installation, customization and other useful articles: https://akveo.github.io/blur-admin/
 
