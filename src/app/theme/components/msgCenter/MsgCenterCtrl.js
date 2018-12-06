@@ -10,7 +10,7 @@
 
   /** @ngInject */
   function MsgCenterCtrl($scope, $sce) {
-    $scope.users = {
+ /*    $scope.users = {
       0: {
         name: 'Vlad',
       },
@@ -108,5 +108,5 @@
       }
       return $sce.trustAsHtml(text);
     };
-  }
+  } */
 })();

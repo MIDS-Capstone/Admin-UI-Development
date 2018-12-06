@@ -21,7 +21,7 @@
             order: 250,
           },
         })
-        .state('form.inputs', {
+ /*        .state('form.inputs', {
           url: '/inputs',
           templateUrl: 'app/pages/form/inputs/inputs.html',
           title: 'Form Inputs',
@@ -36,7 +36,7 @@
           sidebarMeta: {
             order: 100,
           },
-        })
+        }) */
         .state('form.wizard',
         {
           url: '/wizard',
