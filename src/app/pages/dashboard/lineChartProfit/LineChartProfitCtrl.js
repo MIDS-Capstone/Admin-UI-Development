@@ -19,69 +19,29 @@
       marginTop: 0,
       marginRight: 15,
       dataProvider: [
-        {
-          year: '1990',
-          value: -0.17
+		{
+          x: 0,
+          y: 0
         },
         {
-          year: '1991',
-          value: -0.254
+          x: 2500,
+          y: 17000000
         },
         {
-          year: '1992',
-          value: 0.019
+          x: 3000,
+          y: 34000000
         },
         {
-          year: '1993',
-          value: -0.063
+          x: 5000,
+          y: 45000000
         },
         {
-          year: '1994',
-          value: 0.005
+          x: 7500,
+          y: 57000000
         },
         {
-          year: '1995',
-          value: 0.077
-        },
-        {
-          year: '1996',
-          value: 0.12
-        },
-        {
-          year: '1997',
-          value: 0.011
-        },
-        {
-          year: '1998',
-          value: 0.177
-        },
-        {
-          year: '1999',
-          value: -0.021
-        },
-        {
-          year: '2000',
-          value: -0.037
-        },
-        {
-          year: '2001',
-          value: 0.03
-        },
-        {
-          year: '2002',
-          value: 0.179
-        },
-        {
-          year: '2003',
-          value: 0.2
-        },
-        {
-          year: '2004',
-          value: 0.180
-        },
-        {
-          year: '2005',
-          value: 0.21
+          x: 10000,
+          y: 72000000
         }
       ],
       valueAxes: [
@@ -90,19 +50,20 @@
           position: 'left',
           gridAlpha: 0.5,
           gridColor: layoutColors.border,
+		  title: 'Cumulative profit, USD'
         }
       ],
       graphs: [
         {
           id: 'g1',
-          balloonText: '[[value]]',
+          balloonText: '[[y]]',
           bullet: 'round',
           bulletSize: 8,
           lineColor: layoutColors.danger,
           lineThickness: 1,
           negativeLineColor: layoutColors.warning,
           type: 'smoothedLine',
-          valueField: 'value'
+          valueField: 'y'
         }
       ],
       chartScrollbar: {
@@ -121,18 +82,14 @@
         selectedGraphLineAlpha: 1
       },
       chartCursor: {
-        categoryBalloonDateFormat: 'YYYY',
         cursorAlpha: 0,
         valueLineEnabled: true,
         valueLineBalloonEnabled: true,
         valueLineAlpha: 0.5,
         fullWidth: true
       },
-      dataDateFormat: 'YYYY',
-      categoryField: 'year',
+      categoryField: 'x',
       categoryAxis: {
-        minPeriod: 'YYYY',
-        parseDates: true,
         minorGridAlpha: 0.1,
         minorGridEnabled: true,
         gridAlpha: 0.5,

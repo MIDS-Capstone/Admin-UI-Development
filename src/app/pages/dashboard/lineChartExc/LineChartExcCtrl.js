@@ -6,10 +6,10 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .controller('LineChartPCTCtrl', LineChartPCTCtrl);
+      .controller('LineChartExcCtrl', LineChartExcCtrl);
 
   /** @ngInject */
-  function LineChartPCTCtrl($scope, baConfig, $element, layoutPaths) {
+  function LineChartExcCtrl($scope, baConfig, $element, layoutPaths) {
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
     var lineChart = AmCharts.makeChart(id, {
@@ -25,23 +25,23 @@
         },
         {
           x: 2500,
-          y: 10
+          y: 75000000
         },
         {
           x: 3000,
-          y: 27
+          y: 100000000
         },
         {
           x: 5000,
-          y: 40
+          y: 120000000
         },
         {
           x: 7500,
-          y: 80.2
+          y: 125000000
         },
         {
           x: 10000,
-          y: 93.25
+          y: 130000000
         }
       ],
       valueAxes: [
@@ -50,7 +50,7 @@
           position: 'left',
           gridAlpha: 0.5,
           gridColor: layoutColors.border,
-		  title: 'Percent'
+		  title: 'Exceedance, USD'
         }
       ],
       graphs: [

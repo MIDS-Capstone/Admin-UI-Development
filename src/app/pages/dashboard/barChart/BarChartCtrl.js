@@ -17,7 +17,7 @@
       theme: 'blur',
       color: layoutColors.defaultText,
       dataProvider: [
-        {
+/*         {
           country: 'USA',
           visits: 3025,
           color: layoutColors.primary
@@ -32,20 +32,20 @@
           country: 'Japan',
           visits: 1809,
           color: layoutColors.info
-        },
+        }, */
         {
-          country: 'Germany',
-          visits: 1322,
+          peril: 'US-W',
+          value: 196000000,
           color: layoutColors.success
         },
         {
-          country: 'UK',
-          visits: 1122,
+          peril: 'US-Q',
+          value: 196000000,
           color: layoutColors.warning
         },
         {
-          country: 'France',
-          visits: 1114,
+          peril: 'US-FL',
+          value: 150000000,
           color: layoutColors.primaryLight
         }
       ],
@@ -53,7 +53,7 @@
         {
           axisAlpha: 0,
           position: 'left',
-          title: 'Visitors from country',
+          title: 'Portfolio peril exposure, USD',
           gridAlpha: 0.5,
           gridColor: layoutColors.border,
         }
@@ -66,7 +66,7 @@
           fillAlphas: 0.7,
           lineAlpha: 0.2,
           type: 'column',
-          valueField: 'visits'
+          valueField: 'value'
         }
       ],
       chartCursor: {
@@ -74,7 +74,7 @@
         cursorAlpha: 0,
         zoomable: false
       },
-      categoryField: 'country',
+      categoryField: 'peril',
       categoryAxis: {
         gridPosition: 'start',
         labelRotation: 45,

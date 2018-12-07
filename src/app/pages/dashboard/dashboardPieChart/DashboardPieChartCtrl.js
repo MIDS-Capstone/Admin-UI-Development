@@ -14,27 +14,27 @@
     $scope.charts = [{
       color: pieColor,
       description: 'TVar99',
-      stats: '57,820',
+      stats: '129,500,000',
       icon: 'face',
     }, {
       color: pieColor,
       description: 'Profit',
-      stats: '$ 89,745',
+      stats: '72,000,000',
       icon: 'money',
     }, {
       color: pieColor,
       description: 'Losses',
-      stats: '178,391',
+      stats: '(23,000,000)',
       icon: 'money',
     }, {
       color: pieColor,
       description: '% Trades Profitable',
-      stats: '32,592',
+      stats: '93.25',
       icon: 'money',
     }, {
       color: pieColor,
       description: 'Avg. Profit per Trade',
-      stats: '12,345',
+      stats: '2,800,000',
       icon: 'money',
     }
     ];
