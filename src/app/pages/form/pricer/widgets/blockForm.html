@@ -1,3 +1,5 @@
+<h5>Contract Length and Placement Size Parameters</h5>
+
 <div class="row">
   <div class="col-sm-6">
     <div class="form-group">
@@ -11,7 +13,27 @@
   <div class="col-sm-6">
     <div class="form-group">
       <label for="placement_size">Placement Size</label>
-      <input type="text" class="form-control" id="placement_size" placeholder="Enter Placement Size in USD">
+      <input type="text" class="form-control" id="placement_size" placeholder="Enter Placement Size (USD)">
+    </div>
+  </div>
+</div>
+
+<hr>
+<h5>Peril Types</h5>
+<h6>Enter a decimal between 0-1 for each component peril.</h6>
+<h6>For perils not used, leave entries blank.</h6>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="Caribbean_All_Perils">Caribbean, All Perils</label>
+      <input type="text" class="form-control" id="Caribbean_All_Perils" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="ROW_ex_US_EU_JP_All_Perils">ROW excluding US/EU/JP, All Perils</label>
+      <input type="text" class="form-control" id="ROW_ex_US_EU_JP_All_Perils" placeholder="Enter decimal between 0-1, if applicable">
     </div>
   </div>
 </div>
@@ -19,15 +41,85 @@
 <div class="row">
   <div class="col-sm-6">
     <div class="form-group">
-      <label for="inputFirstName">Email</label>
-      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      <label for="US_CA_Quake">US CA Quake</label>
+      <input type="text" class="form-control" id="US_CA_Quake" placeholder="Enter decimal between 0-1, if applicable">
     </div>
   </div>
   <div class="col-sm-6">
     <div class="form-group">
-      <label for="inputWebsite">Website</label>
-      <input type="text" class="form-control" id="inputWebsite" placeholder="Website">
+      <label for="US_FL_Wind">US FL Wind</label>
+      <input type="text" class="form-control" id="US_FL_Wind" placeholder="Enter decimal between 0-1, if applicable">
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="US_NE1_VA_ME_Wind">US NE1 VA ME Wind</label>
+      <input type="text" class="form-control" id="US_NE1_VA_ME_Wind" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="US_NM_Quake">US NM Quake</label>
+      <input type="text" class="form-control" id="US_NM_Quake" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="US_Other_All_Perils">US Other, All Perils</label>
+      <input type="text" class="form-control" id="US_Other_All_Perils" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="US_SE1_TX_NC_Wind">US SE1 TX NC Wind</label>
+      <input type="text" class="form-control" id="US_SE1_TX_NC_Wind" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="Europe_Quake">Europe Quake</label>
+      <input type="text" class="form-control" id="Europe_Quake" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="Europe_Wind_Flood">Europe Wind Flood</label>
+      <input type="text" class="form-control" id="Europe_Wind_Flood" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="Japan_Quake">Japan Quake</label>
+      <input type="text" class="form-control" id="Japan_Quake" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="Japan_Wind">Japan Wind</label>
+      <input type="text" class="form-control" id="Japan_Wind" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="Auz_NZ_All_Perils">Australia/New Zealand, All Perils</label>
+      <input type="text" class="form-control" id="Auz_NZ_All_Perils" placeholder="Enter decimal between 0-1, if applicable">
+    </div>
+  </div>
+</div>
+
 <button type="submit" class="btn btn-primary">Submit</button>

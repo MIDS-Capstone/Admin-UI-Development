@@ -21,14 +21,14 @@
             order: 250,
           },
         })
-        .state('form.inputs', {
+/*         .state('form.inputs', {
           url: '/inputs',
           templateUrl: 'app/pages/form/inputs/inputs.html',
           title: 'Form Inputs',
           sidebarMeta: {
             order: 0,
           },
-        })
+        }) */
 /*         .state('form.layouts', {
           url: '/layouts',
           templateUrl: 'app/pages/form/layouts/layouts.html',
@@ -38,7 +38,7 @@
           },
         }) */
 		.state('form.pricer', {
-          url: '/pricer',
+          url: '/query',
           templateUrl: 'app/pages/form/pricer/pricer.html',
           title: 'Instrument Query',
           sidebarMeta: {
