@@ -29,15 +29,23 @@
             order: 0,
           },
         })
-        .state('form.layouts', {
+/*         .state('form.layouts', {
           url: '/layouts',
           templateUrl: 'app/pages/form/layouts/layouts.html',
           title: 'Form Layouts',
           sidebarMeta: {
             order: 100,
           },
+        }) */
+		.state('form.pricer', {
+          url: '/pricer',
+          templateUrl: 'app/pages/form/pricer/pricer.html',
+          title: 'Instrument Query',
+          sidebarMeta: {
+            order: 100,
+          },
         })
-        .state('form.wizard',
+/*         .state('form.wizard',
         {
           url: '/wizard',
           templateUrl: 'app/pages/form/wizard/wizard.html',
@@ -47,6 +55,6 @@
           sidebarMeta: {
             order: 200,
           },
-        });
+        }); */
   }
 })();
