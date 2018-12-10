@@ -12,12 +12,12 @@
   function routeConfig($stateProvider) {
     $stateProvider
         .state('dashboard', {
-          url: '/dashboard',
+          url: '/dashboard/:id',
           templateUrl: 'app/pages/dashboard/dashboard.html',
           title: 'Dashboard',
           sidebarMeta: {
-            icon: 'ion-android-home',
-            order: 0,
+            icon: 'ion-analytics',
+            order: 300,
           },
         });
   }
