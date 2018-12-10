@@ -21,22 +21,6 @@
             order: 250,
           },
         })
-/*         .state('form.inputs', {
-          url: '/inputs',
-          templateUrl: 'app/pages/form/inputs/inputs.html',
-          title: 'Form Inputs',
-          sidebarMeta: {
-            order: 0,
-          },
-        }) */
-/*         .state('form.layouts', {
-          url: '/layouts',
-          templateUrl: 'app/pages/form/layouts/layouts.html',
-          title: 'Form Layouts',
-          sidebarMeta: {
-            order: 100,
-          },
-        }) */
 		.state('form.pricer', {
           url: '/query',
           templateUrl: 'app/pages/form/pricer/pricer.html',
