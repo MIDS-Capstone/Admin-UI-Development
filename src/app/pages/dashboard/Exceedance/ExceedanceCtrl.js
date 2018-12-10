@@ -18,32 +18,7 @@
       color: layoutColors.defaultText,
       marginTop: 0,
       marginRight: 15,
-      dataProvider: [
-		{
-          x: 0,
-          y: 0
-        },
-        {
-          x: 2500,
-          y: 75000000
-        },
-        {
-          x: 3000,
-          y: 100000000
-        },
-        {
-          x: 5000,
-          y: 120000000
-        },
-        {
-          x: 7500,
-          y: 125000000
-        },
-        {
-          x: 10000,
-          y: 130000000
-        }
-      ],
+      dataProvider: $scope.simulation.charts.EXCEEDANCE_PROBABILITY_CURVE, 
       valueAxes: [
         {
           axisAlpha: 0,
@@ -56,14 +31,14 @@
       graphs: [
         {
           id: 'g1',
-          balloonText: '[[y]]',
+          balloonText: '[[value]]',
           bullet: 'round',
           bulletSize: 8,
           lineColor: layoutColors.danger,
           lineThickness: 1,
           negativeLineColor: layoutColors.warning,
           type: 'smoothedLine',
-          valueField: 'y'
+          valueField: 'value'
         }
       ],
       chartScrollbar: {
@@ -88,7 +63,7 @@
         valueLineAlpha: 0.5,
         fullWidth: true
       },
-      categoryField: 'x',
+      categoryField: 'simulation',
       categoryAxis: {
         minorGridAlpha: 0.1,
         minorGridEnabled: true,

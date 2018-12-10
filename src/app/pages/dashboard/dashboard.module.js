@@ -19,6 +19,7 @@
             icon: 'ion-analytics',
             order: 300,
           },
+          controller: 'DashboardCtrl',
         });
   }
 

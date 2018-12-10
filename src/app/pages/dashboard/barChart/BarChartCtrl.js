@@ -16,39 +16,25 @@
       type: 'serial',
       theme: 'blur',
       color: layoutColors.defaultText,
-      dataProvider: [
-/*         {
-          country: 'USA',
-          visits: 3025,
-          color: layoutColors.primary
-        },
-        {
-          country: 'China',
-          visits: 1882,
-          color: layoutColors.danger
+      dataProvider: $scope.simulation.charts.RISK_PROFILE,
+      // [
 
-        },
-        {
-          country: 'Japan',
-          visits: 1809,
-          color: layoutColors.info
-        }, */
-        {
-          peril: 'US-W',
-          value: 196000000,
-          color: layoutColors.success
-        },
-        {
-          peril: 'US-Q',
-          value: 196000000,
-          color: layoutColors.warning
-        },
-        {
-          peril: 'US-FL',
-          value: 150000000,
-          color: layoutColors.primaryLight
-        }
-      ],
+      //   {
+      //     peril: 'US-W',
+      //     value: 196000000,
+      //     color: layoutColors.success
+      //   },
+      //   {
+      //     peril: 'US-Q',
+      //     value: 196000000,
+      //     color: layoutColors.warning
+      //   },
+      //   {
+      //     peril: 'US-FL',
+      //     value: 150000000,
+      //     color: layoutColors.primaryLight
+      //   }
+      // ],
       valueAxes: [
         {
           axisAlpha: 0,
