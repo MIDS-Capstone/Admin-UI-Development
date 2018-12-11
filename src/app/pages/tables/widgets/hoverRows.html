@@ -14,14 +14,14 @@
       </thead>
       <tbody>
       <tr ng-repeat="item in navigation_items" class="no-top-border">
-        <td>{{item.id}}</td>
-        <td>{{item.created_user}}</td>
-        <td>{{item.created_datetime}}</td>
-        <td>{{item.description}}</td>
-        <td>{{item.name}}</td>
-        <td>{{item.status}}</td>
-        <td>{{item.uri}}</td>
-        <td class="align-right"><a ng-href="{{pagelink(item.id)}}">Go</a></td>
+        <td class="align-left">{{item.id}}</td>
+        <td class="align-left">{{item.created_user}}</td>
+        <td class="align-left">{{item.created_datetime}}</td>
+        <td class="align-left">{{item.description}}</td>
+        <td class="align-left">{{item.name}}</td>
+        <td class="align-left">{{item.status}}</td>
+        <td class="align-left">{{item.uri}}</td>
+        <td class="align-right"><a class="btn btn-info" role="button" ng-href="{{pagelink(item.id)}}">View</a></td>
       </tr>
       </tbody>
     </table>
