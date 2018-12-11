@@ -13,12 +13,13 @@
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
     
-    /* dataProvider: $scope.simulation.charts.RISK_PROFILE */
+    /* dataProvider: [{ "peril": 'US-W', "value": 10 },{ "peril": 'US-Q', "value": 20},{ "peril": 'EUR-W', "value": 7}] */
+
     var barChart = AmCharts.makeChart(id, {
       type: 'serial',
       theme: 'blur',
       color: layoutColors.defaultText,
-      dataProvider: [{ peril: 'US-W', value: 10 },{ peril: 'US-Q', value: 20},{ peril: 'EUR-W', value: 7}],
+      dataProvider: [{ "peril": 'US-W', "value": 0 },{ "peril": 'US-Q', "value": 0},{ "peril": 'EUR-W', "value": 0}],
       valueAxes: [
         {
           axisAlpha: 0,
@@ -57,5 +58,12 @@
       creditsPosition: 'top-right',
       pathToImages: layoutPaths.images.amChart
     });
+
+    $scope.$watch('simulation', function () {      
+      barChart.validateNow($scope.simulation.charts.RISK_PROFILE);   
+      alert('updating')
+      }, true);
+
+     
   }
 })();
