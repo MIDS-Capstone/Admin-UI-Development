@@ -6,12 +6,13 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .controller('LineChartAVGCtrl', LineChartAVGCtrl);
+      .controller('CumulativeProfitCtrl', CumulativeProfitCtrl);
 
   /** @ngInject */
-  function LineChartAVGCtrl($scope, baConfig, $element, layoutPaths) {
+  function CumulativeProfitCtrl($scope, baConfig, $element, layoutPaths) {
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
+    /*dataProvider: $scope.simulation.charts.CUMULATIVE_PROFIT*/
     var lineChart = AmCharts.makeChart(id, {
       type: 'serial',
       theme: 'blur',
@@ -19,29 +20,29 @@
       marginTop: 0,
       marginRight: 15,
       dataProvider: [
-		{
+		    {
           x: 0,
           y: 0
         },
         {
           x: 2500,
-          y: 970000
+          y: 17000000
         },
         {
           x: 3000,
-          y: 1400000
+          y: 34000000
         },
         {
           x: 5000,
-          y: 1750000
+          y: 45000000
         },
         {
           x: 7500,
-          y: 2300000
+          y: 57000000
         },
         {
           x: 10000,
-          y: 2800000
+          y: 72000000
         }
       ],
       valueAxes: [
@@ -50,7 +51,7 @@
           position: 'left',
           gridAlpha: 0.5,
           gridColor: layoutColors.border,
-		  title: 'Average profit, USD'
+		  title: 'Cumulative profit, USD'
         }
       ],
       graphs: [

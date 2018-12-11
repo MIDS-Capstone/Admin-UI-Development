@@ -6,12 +6,13 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .controller('LineChartProfitCtrl', LineChartProfitCtrl);
+      .controller('TradesProfitableCtrl', TradesProfitableCtrl);
 
   /** @ngInject */
-  function LineChartProfitCtrl($scope, baConfig, $element, layoutPaths) {
+  function TradesProfitableCtrl($scope, baConfig, $element, layoutPaths) {
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
+    /* dataProvider: $scope.simulation.charts.PERC_TRADES_PROFITABLE */
     var lineChart = AmCharts.makeChart(id, {
       type: 'serial',
       theme: 'blur',
@@ -25,23 +26,23 @@
         },
         {
           x: 2500,
-          y: 17000000
+          y: 10
         },
         {
           x: 3000,
-          y: 34000000
+          y: 27
         },
         {
           x: 5000,
-          y: 45000000
+          y: 40
         },
         {
           x: 7500,
-          y: 57000000
+          y: 80.2
         },
         {
           x: 10000,
-          y: 72000000
+          y: 93.25
         }
       ],
       valueAxes: [
@@ -50,7 +51,7 @@
           position: 'left',
           gridAlpha: 0.5,
           gridColor: layoutColors.border,
-		  title: 'Cumulative profit, USD'
+		  title: 'Percent'
         }
       ],
       graphs: [

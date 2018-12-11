@@ -6,35 +6,19 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .controller('BarChartCtrl', BarChartCtrl);
+      .controller('RiskProfileCtrl', RiskProfileCtrl);
 
   /** @ngInject */
-  function BarChartCtrl($scope, baConfig, $element, layoutPaths) {
+  function RiskProfileCtrl($scope, baConfig, $element, layoutPaths) {
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
+    
+    /* dataProvider: $scope.simulation.charts.RISK_PROFILE */
     var barChart = AmCharts.makeChart(id, {
       type: 'serial',
       theme: 'blur',
       color: layoutColors.defaultText,
-      dataProvider: $scope.simulation.charts.RISK_PROFILE,
-      // [
-
-      //   {
-      //     peril: 'US-W',
-      //     value: 196000000,
-      //     color: layoutColors.success
-      //   },
-      //   {
-      //     peril: 'US-Q',
-      //     value: 196000000,
-      //     color: layoutColors.warning
-      //   },
-      //   {
-      //     peril: 'US-FL',
-      //     value: 150000000,
-      //     color: layoutColors.primaryLight
-      //   }
-      // ],
+      dataProvider: [{ peril: 'US-W', value: 10 },{ peril: 'US-Q', value: 20},{ peril: 'EUR-W', value: 7}],
       valueAxes: [
         {
           axisAlpha: 0,

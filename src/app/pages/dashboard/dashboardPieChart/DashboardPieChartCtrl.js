@@ -11,6 +11,8 @@
   /** @ngInject */
   function DashboardPieChartCtrl($scope, $timeout, baConfig, baUtil) {
     var pieColor = baUtil.hexToRGB(baConfig.colors.defaultText, 0.2);
+    
+    /*
     $scope.charts = [{
       color: pieColor,
       description: 'TVar99',
@@ -38,6 +40,9 @@
       icon: 'money',
     }
     ];
+*/
+  
+
 
     function getRandomArbitrary(min, max) {
       return Math.random() * (max - min) + min;

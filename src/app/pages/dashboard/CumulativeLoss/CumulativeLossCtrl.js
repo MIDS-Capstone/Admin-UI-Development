@@ -6,12 +6,14 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .controller('LineChartLossCtrl', LineChartLossCtrl);
+      .controller('CumulativeLossCtrl', CumulativeLossCtrl);
 
   /** @ngInject */
-  function LineChartLossCtrl($scope, baConfig, $element, layoutPaths) {
+  function CumulativeLossCtrl($scope, baConfig, $element, layoutPaths) {
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
+
+    /* dataProvider: $scope.simulation.charts.CUMULATIVE_LOSS */
     var lineChart = AmCharts.makeChart(id, {
       type: 'serial',
       theme: 'blur',

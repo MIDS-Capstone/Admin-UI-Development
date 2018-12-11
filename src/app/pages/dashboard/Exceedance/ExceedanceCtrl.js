@@ -6,26 +6,27 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .controller('LineChartExcCtrl', LineChartExcCtrl);
+      .controller('ExceedanceCtrl', ExceedanceCtrl);
 
   /** @ngInject */
-  function LineChartExcCtrl($scope, baConfig, $element, layoutPaths) {
+  function ExceedanceCtrl($scope, baConfig, $element, layoutPaths) {
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
+    /* $scope.simulation.charts.EXCEEDANCE_PROBABILITY_CURVE */
     var lineChart = AmCharts.makeChart(id, {
       type: 'serial',
       theme: 'blur',
       color: layoutColors.defaultText,
       marginTop: 0,
       marginRight: 15,
-      dataProvider: $scope.simulation.charts.EXCEEDANCE_PROBABILITY_CURVE, 
+      dataProvider: [{simulation:1, value:10},{simulation:2,value:5},{simulation:3,value:10}], 
       valueAxes: [
         {
           axisAlpha: 0,
           position: 'left',
           gridAlpha: 0.5,
           gridColor: layoutColors.border,
-		  title: 'Exceedance, USD'
+		      title: 'Exceedance, USD'
         }
       ],
       graphs: [

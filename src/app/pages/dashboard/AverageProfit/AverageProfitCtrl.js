@@ -6,18 +6,19 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .controller('LineChartPCTCtrl', LineChartPCTCtrl);
+      .controller('AverageProfitCtrl', AverageProfitCtrl);
 
   /** @ngInject */
-  function LineChartPCTCtrl($scope, baConfig, $element, layoutPaths) {
+  function AverageProfitCtrl($scope, baConfig, $element, layoutPaths) {
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
+    /* dataProvider: $scope.simulation.charts.AVERAGE_PROFIT_PER_TRADE */
     var lineChart = AmCharts.makeChart(id, {
       type: 'serial',
       theme: 'blur',
       color: layoutColors.defaultText,
       marginTop: 0,
-      marginRight: 15,
+      marginRight: 15,      
       dataProvider: [
 		{
           x: 0,
@@ -25,23 +26,23 @@
         },
         {
           x: 2500,
-          y: 10
+          y: 970000
         },
         {
           x: 3000,
-          y: 27
+          y: 1400000
         },
         {
           x: 5000,
-          y: 40
+          y: 1750000
         },
         {
           x: 7500,
-          y: 80.2
+          y: 2300000
         },
         {
           x: 10000,
-          y: 93.25
+          y: 2800000
         }
       ],
       valueAxes: [
@@ -50,7 +51,7 @@
           position: 'left',
           gridAlpha: 0.5,
           gridColor: layoutColors.border,
-		  title: 'Percent'
+		  title: 'Average profit, USD'
         }
       ],
       graphs: [
