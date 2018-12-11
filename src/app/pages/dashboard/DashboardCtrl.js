@@ -13,6 +13,9 @@
   /** @ngInject */
   function DashboardCtrl($scope, $http, $stateParams, $filter, editableOptions, editableThemes) {
 
+    //https://stackoverflow.com/questions/18877715/http-auth-headers-in-angularjs
+    $http.defaults.headers.common['Authorization'] = 'Basic ' + btoa($scope.user + ":" + $scope.password)};
+
     /* 
     , {
       headers: {
