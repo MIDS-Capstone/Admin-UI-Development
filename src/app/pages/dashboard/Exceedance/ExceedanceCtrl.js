@@ -12,14 +12,14 @@
   function ExceedanceCtrl($scope, baConfig, $element, layoutPaths) {
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
-    /* $scope.simulation.charts.EXCEEDANCE_PROBABILITY_CURVE */
+   
     var lineChart = AmCharts.makeChart(id, {
       type: 'serial',
       theme: 'blur',
       color: layoutColors.defaultText,
       marginTop: 0,
       marginRight: 15,
-      dataProvider: [{simulation:1, value:10},{simulation:2,value:5},{simulation:3,value:10}], 
+      dataProvider: [{simulation:1, value:0},{simulation:10000,value:0}], 
       valueAxes: [
         {
           axisAlpha: 0,
@@ -86,6 +86,14 @@
     function zoomChart() {
       lineChart.zoomToIndexes(Math.round(lineChart.dataProvider.length * 0.4), Math.round(lineChart.dataProvider.length * 0.55));
     }
+
+    $scope.$watch('simulation', function () {      
+      if ($scope.simulation.charts){
+          lineChart.dataProvider = $scope.simulation.charts.EXCEEDANCE_PROBABILITY_CURVE;
+          lineChart.validateData();   
+        } 
+      }, true);
+
   }
 
 })();

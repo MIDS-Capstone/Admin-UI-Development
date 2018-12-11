@@ -12,39 +12,14 @@
   function CumulativeProfitCtrl($scope, baConfig, $element, layoutPaths) {
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
-    /*dataProvider: $scope.simulation.charts.CUMULATIVE_PROFIT*/
+    
     var lineChart = AmCharts.makeChart(id, {
       type: 'serial',
       theme: 'blur',
       color: layoutColors.defaultText,
       marginTop: 0,
       marginRight: 15,
-      dataProvider: [
-		    {
-          x: 0,
-          y: 0
-        },
-        {
-          x: 2500,
-          y: 17000000
-        },
-        {
-          x: 3000,
-          y: 34000000
-        },
-        {
-          x: 5000,
-          y: 45000000
-        },
-        {
-          x: 7500,
-          y: 57000000
-        },
-        {
-          x: 10000,
-          y: 72000000
-        }
-      ],
+      dataProvider: [{simulation:0,value:0},{simulation:1000,value:0},{simulation:2000,value:0},{simulation:3000,value:0},{simulation:4000,value:0},{simulation:5000,value:0},{simulation:6000,value:0},{simulation:7000,value:0},{simulation:8000,value:0},{simulation:9000,value:0},{simulation:10000,value:0}],
       valueAxes: [
         {
           axisAlpha: 0,
@@ -57,14 +32,14 @@
       graphs: [
         {
           id: 'g1',
-          balloonText: '[[y]]',
+          balloonText: '[[value]]',
           bullet: 'round',
           bulletSize: 8,
           lineColor: layoutColors.danger,
           lineThickness: 1,
           negativeLineColor: layoutColors.warning,
           type: 'smoothedLine',
-          valueField: 'y'
+          valueField: 'value'
         }
       ],
       chartScrollbar: {
@@ -89,7 +64,7 @@
         valueLineAlpha: 0.5,
         fullWidth: true
       },
-      categoryField: 'x',
+      categoryField: 'simualtion',
       categoryAxis: {
         minorGridAlpha: 0.1,
         minorGridEnabled: true,
@@ -111,6 +86,14 @@
     function zoomChart() {
       lineChart.zoomToIndexes(Math.round(lineChart.dataProvider.length * 0.4), Math.round(lineChart.dataProvider.length * 0.55));
     }
+
+    
+    $scope.$watch('simulation', function () {      
+      if ($scope.simulation.charts){
+          lineChart.dataProvider = $scope.simulation.charts.CUMULATIVE_PROFIT;
+          lineChart.validateData();   
+        } 
+      }, true);
   }
 
 })();

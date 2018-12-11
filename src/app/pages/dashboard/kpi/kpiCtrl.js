@@ -6,10 +6,11 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .service('dashboardPieChart', dashboardPieChart);
+      .controller('kpiCtrl', kpiCtrl);
 
   /** @ngInject */
-  function dashboardPieChart() {
-
+  function kpiCtrl($scope, $timeout, baConfig, baUtil) {
+    
   }
+  
 })();

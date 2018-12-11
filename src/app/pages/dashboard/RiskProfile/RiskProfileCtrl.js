@@ -13,7 +13,7 @@
     var layoutColors = baConfig.colors;
     var id = $element[0].getAttribute('id');
     
-    /* dataProvider: [{ "peril": 'US-W', "value": 10 },{ "peril": 'US-Q', "value": 20},{ "peril": 'EUR-W', "value": 7}] */
+    /* dataProvider: Add all metarisk buckets here */
 
     var barChart = AmCharts.makeChart(id, {
       type: 'serial',
@@ -60,8 +60,10 @@
     });
 
     $scope.$watch('simulation', function () {      
-      barChart.validateNow($scope.simulation.charts.RISK_PROFILE);   
-      alert('updating')
+      if ($scope.simulation.charts){
+          barChart.dataProvider = $scope.simulation.charts.RISK_PROFILE;
+          barChart.validateData();   
+        } 
       }, true);
 
      

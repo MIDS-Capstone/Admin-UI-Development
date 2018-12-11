@@ -34,5 +34,11 @@
         });
     $urlRouterProvider.when('/tables','/tables/basic');
   }
+  
+  $scope.$watch('navigation_items', function () {      
+    if ($scope.navigation_items){
+        /* do nothing */
+      } 
+    }, true);
 
 })();

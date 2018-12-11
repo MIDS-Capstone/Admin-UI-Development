@@ -13,27 +13,22 @@
   /** @ngInject */
   function TablesPageCtrl($scope, $http, $filter, editableOptions, editableThemes) {
 
+    /*
+    $scope.user = 'admin';
+    $scope.password = 'admin';
+    $http.defaults.headers.common['Authorization'] = 'Basic ' + btoa($scope.user + ":" + $scope.password);
+    */
+    $scope.navigation_items = {};
+    
     $http.get('http://192.168.1.118:5001/api/v1.0/navigation')
-        .success(function (data)
-        {
-          //$scope.navigation_items = data.navigation_items;
-        });
-
-    $scope.navigation_items =  [
-      {
-          "id":1, 
-          "created_user": "sstorey",
-          "created_datetime": "2018-10-17T16:32:42.676619",
-          "description": "...",
-                      "name": "$10b US W contract",
-          "status": "PENDING",
-                      "uri": "http://127.0.0.1:5001/api/v1.0/auctions/1"
-      }   
-    ]
+    .then(function(response){
+      $scope.navigation_items = response.data.navigation_items;   
+    });
    
     $scope.pagelink = function(id) {
       return '/#/dashboard/' + id;
     };
+    
   }
 
 })();

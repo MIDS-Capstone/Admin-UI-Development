@@ -20,7 +20,7 @@
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/tables');
 
 /*     baSidebarServiceProvider.addStaticItem({
       title: 'Pages',
@@ -29,7 +29,9 @@
         title: 'Sign In',
         fixedHref: 'auth.html',
         blank: true
-      }, {
+      }]
+    });
+    , {
         title: 'Sign Up',
         fixedHref: 'reg.html',
         blank: true
