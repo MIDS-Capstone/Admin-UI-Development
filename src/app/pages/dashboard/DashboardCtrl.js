@@ -20,15 +20,16 @@
   function DashboardCtrl($scope, $http, $stateParams, $filter, editableOptions, editableThemes) {
 
     $scope.simulation = []
+    $http.defaults.headers.common['Authorization'] = 'Basic ' + btoa($scope.user + ":" + $scope.password)};
 
     activate();
 
     function activate() {
-     return $http.get('http://192.168.1.118:5001/api/v1.0/simulations/' + $stateParams.id)
-      .then(function (promise)	        
-      {
-        $scope.simulation = promise.data.simulation;
-      }); 	     
+      return $http.get('http://192.168.1.118:5001/api/v1.0/simulations/' + $stateParams.id)
+        .then(function (promise)	        
+        {
+          $scope.simulation = promise.data.simulation;
+        }); 	     
     };
 
     $scope.pagelink = function(id) {
@@ -36,4 +37,4 @@
     };
   }
 
-})();
+)();
