@@ -22,6 +22,16 @@
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
     $urlRouterProvider.otherwise('/tables');
 
+    baSidebarServiceProvider.addStaticItem({
+      title: 'Pages',
+      icon: 'ion-document',
+      subMenu: [{
+        title: 'Sign In',
+        fixedHref: 'auth.html',
+        blank: true
+      }]
+    });
+
 /*     baSidebarServiceProvider.addStaticItem({
       title: 'Pages',
       icon: 'ion-document',
