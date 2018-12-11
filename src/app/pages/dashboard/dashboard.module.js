@@ -15,10 +15,6 @@
           url: '/dashboard/:id',
           templateUrl: 'app/pages/dashboard/dashboard.html',
           title: 'Dashboard',
-          sidebarMeta: {
-            icon: 'ion-analytics',
-            order: 300,
-          },
           controller: 'DashboardCtrl',
         });
   }
