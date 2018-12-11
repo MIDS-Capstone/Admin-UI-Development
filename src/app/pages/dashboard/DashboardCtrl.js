@@ -22,11 +22,17 @@
       }
     }
   */
-    $http.get('http://192.168.1.118:5001/api/v1.0/simulations/' + $stateParams.id)
+
+    activate();
+
+    function activate() {
+      return $http.get('http://192.168.1.118:5001/api/v1.0/simulations/' + $stateParams.id)
         .success(function (data)
         {
           $scope.simulation = data.simulation;
+          return data;
         }); 
+    };
    
     $scope.pagelink = function(id) {
       return '/#/dashboard/' + id;
