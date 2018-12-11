@@ -18,13 +18,32 @@
     $scope.password = 'admin';
     $http.defaults.headers.common['Authorization'] = 'Basic ' + btoa($scope.user + ":" + $scope.password);
     */
-    $scope.navigation_items = {};
+    $scope.navigation_items = [
+      {
+          "created_datetime": "2018-10-17T16:32:42.676619",
+          "created_user": "sstorey",
+          "description": "...",
+          "id": 1,
+          "item_type": "RL",
+          "name": "My high risk portfolio",
+          "status": "PENDING"
+      },
+      {
+          "created_datetime": "2018-10-17T16:35:42.676619",
+          "created_user": "sstorey",
+          "description": "...",
+          "id": 2,
+          "item_type": "RL",
+          "name": "My medium risk portfolio",
+          "status": "PENDING"
+      }]
     
-    $http.get('http://192.168.1.118:5001/api/v1.0/navigation')
+    /*$http.get('http://192.168.1.118:5001/api/v1.0/navigation')
     .then(function(response){
       $scope.navigation_items = response.data.navigation_items;   
     });
-   
+   */
+  
     $scope.pagelink = function(id) {
       return '/#/dashboard/' + id;
     };

@@ -1,14 +1,14 @@
 <div id="kpi" class="admin-chart" ng-controller="kpiCtrl">
-  <div class="row">
-    <div class="pie-chart-container" ng-repeat="(key,value) in simulation.kpis">
+  <div class="row pie-charts">
+    <div class="pie-chart-container col-lg-4" ng-repeat="(key,value) in simulation.kpis">
       <div ba-panel>
-        <div class="kpi-item">
+        <div class="pie-chart-item">
           <div class="description">
             <div>{{ key }}</div>
             <div class="description-stats">{{ value }}</div>
           </div>
         </div>
-      </div>
+      </div>      
     </div>
   </div>
 </div>
