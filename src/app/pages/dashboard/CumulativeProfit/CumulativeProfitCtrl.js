@@ -64,7 +64,7 @@
         valueLineAlpha: 0.5,
         fullWidth: true
       },
-      categoryField: 'simualtion',
+      categoryField: 'simulation',
       categoryAxis: {
         minorGridAlpha: 0.1,
         minorGridEnabled: true,

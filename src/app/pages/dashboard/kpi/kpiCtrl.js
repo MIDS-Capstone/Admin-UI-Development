@@ -10,7 +10,7 @@
 
   /** @ngInject */
   function kpiCtrl($scope, $timeout, baConfig, baUtil) {
-    
+
   }
   
 })();
